@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://kit.fontawesome.com/03c101c2b4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+
+<body>
+
+     <div class="audio-container">
+        <h1><b>Ninja Music Player</b></h1>
+
+        <div class="audio-img-wrapper">
+            <div class="audio-img">
+                <img id="e" src="justin.jpg" alt="" class="img">
+            </div>
+
+            <h2 id="title" class="audio-title">Let me love you</h2>
+            <h5 id="artist" class="audio-singer">DJ Snake/Justin Beiber</h5>
+        </div>
+
+       <div class="audio-progress">
+           <audio  id="song">
+              <source src="Let-Me-Love-You_320(PaglaSongs).mp3" type="audio/mpeg">
+          </audio>
+            <div class="progress">
+                <div class="progress-bar"><input type="range" value="0" id="progress"></div>
+                <div class="progress-head"></div>
+            </div>
+            <div id="temp">
+            <div id="current-time" class="current-time">00:00</div>
+            <div id="d" class="duration">03:25</div>
+            </div>
+        </div>
+
+        <div class="audio-btns">
+
+            <button onclick="previous()" id="back" class="btn skip-back">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button onclick="playPause()" id="play" class="pause">
+                <span><i id="cntrlIcon" class="fa-solid fa-pause"></i></span>
+            </button>
+
+            <button onclick="next()" id="forward" class="btn skip-forward">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+        </div> 
+    </div>
+    <script src="script.js"></script> 
+</body>
+
+</html>
